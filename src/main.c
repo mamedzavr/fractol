@@ -6,13 +6,13 @@
 /*   By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 12:14:46 by wqarro-v          #+#    #+#             */
-/*   Updated: 2019/04/01 16:14:19 by wqarro-v         ###   ########.fr       */
+/*   Updated: 2019/04/01 16:38:56 by wqarro-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fractol.h"
 
-int	error(char *str)
+int		error(char *str)
 {
 	ft_putendl(str);
 	exit(EXIT_FAILURE);
