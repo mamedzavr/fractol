@@ -6,7 +6,7 @@
 /*   By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 15:06:58 by wqarro-v          #+#    #+#             */
-/*   Updated: 2019/03/29 21:24:38 by wqarro-v         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:44:53 by wqarro-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void		crunch(t_fractol *f)
 	zero(f);
 	i = -1;
 	while ((f->c[1].newre * f->c[1].newre + f->c[1].newim * f->c[1].newim)
-	< 4 && ++i < f->iter)
+	< 4 && ++i < f->iter[1])
 	{
 		f->c[1].oldre = f->c[1].newre;
 		f->c[1].oldim = f->c[1].newim;
@@ -39,7 +39,7 @@ static void		crunch(t_fractol *f)
 			f->c[1].oldim + f->c[1].cre;
 		f->c[1].newim = 2 * f->c[1].oldre * f->c[1].oldim + f->c[1].cim;
 	}
-	if (i != f->iter)
+	if (i != f->iter[1])
 		f->img.data[f->y * W + f->x] = ((i * f->color.r) % 255 << 16) +
 		((i * f->color.g) % 255 << 8) + ((i * f->color.b) % 255);
 	else

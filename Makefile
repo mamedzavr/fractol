@@ -6,7 +6,7 @@
 #    By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/12 12:11:08 by wqarro-v          #+#    #+#              #
-#    Updated: 2019/03/26 16:32:31 by wqarro-v         ###   ########.fr        #
+#    Updated: 2019/04/01 18:12:34 by wqarro-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ INC = ./inc
 LIBFTFOLDER = ./libft
 LIBFTINC = -I ./libft -L ./libft -lft
 FLAGS = -Wall -Wextra -Werror
-
 MLX = -I /usr/local/include -L /usr/local/lib -lmlx -framework OpenGL -framework AppKit -framework OpenCL
 
 all: $(NAME)

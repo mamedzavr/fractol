@@ -6,7 +6,7 @@
 /*   By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 16:37:25 by wqarro-v          #+#    #+#             */
-/*   Updated: 2019/03/29 21:34:12 by wqarro-v         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:42:35 by wqarro-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void		crunch(t_fractol *f)
 	i = -1;
 	while (!(fabs(f->c[2].oldre) > 10 || fabs(f->c[2].oldim) > 10 ||
 	f->c[2].oldre * f->c[2].oldre + f->c[2].oldim * f->c[2].oldim > 100)
-	&& ++i < f->iter)
+	&& ++i < f->iter[2])
 	{
 		oldre2 = f->c[2].oldre * (f->c[2].oldre * f->c[2].oldre - 3 *
 			f->c[2].oldim * f->c[2].oldim) + f->c[2].cre;

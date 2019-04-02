@@ -6,7 +6,7 @@
 /*   By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 16:38:52 by wqarro-v          #+#    #+#             */
-/*   Updated: 2019/03/29 21:34:00 by wqarro-v         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:53:36 by wqarro-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,27 +49,27 @@ static void		key1(int key, t_fractol *f)
 static void		key0(int key, t_fractol *f)
 {
 	if (key == 125)
-		f->move[f->frac].movey += 0.05;
+		f->move[f->frac].movey += 0.05 / f->move[f->frac].zoom;
 	if (key == 126)
-		f->move[f->frac].movey -= 0.05;
+		f->move[f->frac].movey -= 0.05 / f->move[f->frac].zoom;
 	if (key == 123)
-		f->move[f->frac].movex -= 0.05;
+		f->move[f->frac].movex -= 0.05 / f->move[f->frac].zoom;
 	if (key == 124)
-		f->move[f->frac].movex += 0.05;
+		f->move[f->frac].movex += 0.05 / f->move[f->frac].zoom;
 	if (key == 69 && f->move[f->frac].zoomfactor < 300)
 	{
 		f->move[f->frac].zoom += 0.05;
 		f->move[f->frac].zoomfactor++;
 	}
-	if (key == 78 && f->move[f->frac].zoomfactor > -10)
+	if (key == 78 && f->move[f->frac].zoomfactor > 0)
 	{
 		f->move[f->frac].zoom -= 0.05;
 		f->move[f->frac].zoomfactor--;
 	}
 	if (key == 24)
-		f->iter += 5;
-	if (key == 27)
-		f->iter -= 5;
+		f->iter[f->frac] += 5;
+	if (key == 27 && f->iter[f->frac] > 5)
+		f->iter[f->frac] -= 5;
 }
 
 int				deal_key(int key, t_fractol *f)

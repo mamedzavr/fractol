@@ -6,7 +6,7 @@
 /*   By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 12:12:42 by wqarro-v          #+#    #+#             */
-/*   Updated: 2019/03/29 21:20:13 by wqarro-v         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:40:53 by wqarro-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ typedef struct	s_fractol
 	t_img		img;
 	t_color		color;
 	int			frac;
-	int			iter;
+	int			iter[3];
 	int			stopkey;
 	int			key;
 	int			x;
@@ -97,7 +97,7 @@ typedef struct	s_fractol
 }				t_fractol;
 
 int				error(char *str);
-t_fractol		*init(void);
+t_fractol		*init(char	*argc);
 int				deal_key(int key, t_fractol *f);
 void			julia(t_fractol *f);
 void			mandelbrot(t_fractol *f);

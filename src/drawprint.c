@@ -6,7 +6,7 @@
 /*   By: wqarro-v <wqarro-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 15:18:29 by wqarro-v          #+#    #+#             */
-/*   Updated: 2019/03/29 22:06:32 by wqarro-v         ###   ########.fr       */
+/*   Updated: 2019/04/01 17:43:01 by wqarro-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void		allocatanddel(t_fractol *f)
 
 	i = -1;
 	p[0] = ft_itoa(f->move[f->frac].zoomfactor);
-	p[1] = ft_itoa(f->iter);
+	p[1] = ft_itoa(f->iter[f->frac]);
 	p[2] = ft_itoa(f->color.r);
 	p[3] = ft_itoa(f->color.g);
 	p[4] = ft_itoa(f->color.b);
